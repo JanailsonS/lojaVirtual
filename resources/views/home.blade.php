@@ -10,81 +10,47 @@
  </head>
 
  <body>
-    <nav class="navbar navbar is-light pt-5 pr-6 pl-6  mr-0">
+    <nav class="navbar navbar is-light pt-4 pr-5 pl-6  mr-0">
         <a href="#" class="navbar-brand">LojaVirtual</a>
         <div class="nav-menu ">
             <div class="navbar-nav">
-                <a class="nav-item ml-5" >Home</a>
-                <a class="nav-item ml-5">Categorias</a>
-                <a class="nav-item ml-5">Cadastrar</a>
+                <a class="nav-item ml-5" href="{{ route('home') }}">Home</a>
+                <a class="nav-item ml-5" href="{{ route('categoria') }}">Categorias</a>
+                <a class="nav-item ml-5" href="{{ route('cadastrar') }}">Cadastrar</a>
              </div>
         </div>
-        <div class="navbar-end">
-        <a href="#" class="btn btn-sm"><i class="fa fa-shopping-cart"></i></a>
-        </div>
+            <div class="navbar-end">
+                <a href="#" class="button button is-light"><i class="fa fa-shopping-cart"></i></a>
+             </div>
      </nav>
 
      <div class="container">
-        <div class="columns">
-            <div class="column">
-                <figure class="img is-200x200">
-                    <img src="http://localhost/imagens/produto1.png">
-                </figure>
-            </div>
-        
-        
-            <div class="column">
-                <figure class="img is-200x200">
-                    <img src="http://localhost/imagens/produto2.png">
-                </figure>
-            </div>
-        
-        
-            <div class="column">
-                <figure class="img is-200x200">
-                    <img src="http://localhost/imagens/produto3.jpg">
-                </figure>
-            </div>
-        
-
-            <div class="column">
-                <figure class="img is-200x200">
-                    <img src="http://localhost/imagens/produto4.jpg">
-                </figure>
-            </div>
-        </div>
 
         <div class="columns">
-            <div class="column">
-                <figure class="img is-200x200">
-                    <img src="http://localhost/imagens/produto5.jpg">
-                </figure>
+            @if(isset($lista))
+                @foreach($lista as $prod)
+                        <div class="column">
+                            <div class="card">
+                                <figure class="img is-300x300">
+                                    <img src="{{asset($prod->foto)}}" class="card-img-top"/>
+                                </figure>
+
+                                <div class="card-content">
+                                    <h6 class="card-title">{{ $prod->nome }} - R${{ $prod->valor }}</h6>
+                                    <a href="#" class="button is-small is-fullwidth is-primary">Adicionar</a>
+                                </div>
+                            </div>
+                        </div>
+                @endforeach
+            @endif
+                                    
             </div>
+    </div>
         
-
-            <div class="column">
-                <figure class="img is-200x200">
-                    <img src="http://localhost/imagens/produto6.jpg">
-                </figure>
-            </div>
-
-                <div class="column">
-                <figure class="img is-200x200">
-                    <img src="http://localhost/imagens/produto7.jpg">
-                </figure>
-            </div>
         
-
-            <div class="column">
-                <figure class="img is-200x200">
-                    <img src="http://localhost/imagens/produto8.jpg">
-                </figure>
-            </div>
+           
         
-         </div>
-
-
-      </div>
+  </div>
 
  </body>
 
