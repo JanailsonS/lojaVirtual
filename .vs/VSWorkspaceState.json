@@ -6,8 +6,9 @@
     "\\app\\Http\\Controllers",
     "\\database",
     "\\resources",
+    "\\resources\\views",
     "\\routes"
   ],
-  "SelectedNode": "\\app\\Http\\Controllers\\ProdutoController.php",
+  "SelectedNode": "\\resources\\views\\categoria.blade.php",
   "PreviewInSolutionExplorer": false
 }

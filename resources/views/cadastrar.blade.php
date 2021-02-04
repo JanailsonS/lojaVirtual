@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-         <meta charset="UTF-8">
-	    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-           
-          <title>LojaVirtual</title>
+@extends("layout")
+    @section("conteudo")
+        <h3>Cadastrar Cliente</h3>
 
-   </head>
-
-   <body>
-    <h3>Cadastrar Cliente</h3>
-  </body>
-
-</html>
+    @endsection
