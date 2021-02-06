@@ -20,16 +20,17 @@
              </div>
         </div>
             <div class="navbar-end">
-                <a href="#" class="button button is-light"><i class="fa fa-shopping-cart"></i></a>
+                <a href="{{route('ver_carrinho')}}" class="button button is-light"><i class="fa fa-shopping-cart"></i></a>
              </div>
      </nav>
 
      <div class="container">
 
             <div class="columns">
+               
                 <!--Essa Div vai ser ter arquivos que serão adcionados conteúdos -->
                 @yield("conteudo")
-                                              
+                                        
             </div>
 
     </div>
