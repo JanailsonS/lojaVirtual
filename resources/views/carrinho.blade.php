@@ -1,7 +1,9 @@
 @extends("layout")
     @section("conteudo")
-        <h3>Carrinho</h3>
 
+    <div class="column is-2">
+    <h3 class="title is-3">Carrinho</h3>
+    </div>
         @if(isset($cart) && count($cart) > 0)
 
 
@@ -17,10 +19,10 @@
                 </tr>
             </thead>
             <tbory>
-            @foreach($cart as $p)
+            @foreach($cart as $indice => $p)
                 <tr>
 					<td>
-						<a href="#" class="btn btn-danger btn-sm">
+						<a href="{{ route('carrinho_excluir',['indice'=> $indice])}}" class="button is-danger is-light button-sm">
 							<i class="fa fa-trash"></i>
 						</a>
 					</td>
@@ -37,7 +39,9 @@
         </table>
 
         @else
+        <div class="column has-text-centered">
         <p>Nenhum item adicionado ao carrinho</p>
+        </div>
         @endif
 
     @endsection
